@@ -97,6 +97,7 @@ a{color:inherit}
 .feebar .fk{font-family:var(--disp);letter-spacing:.2em;font-size:13px;margin:0}
 .feebar .fv{font-size:19px;font-weight:900;margin:2px 0}
 .feebar .fn{font-size:14px;margin:0}
+.feebar.points{background:var(--g);margin-top:16px}
 
 /* THEMES */
 .theme-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:26px 0 0}
@@ -323,13 +324,17 @@ footer a{color:var(--y)}
       </div>
       <div class="catcard relay">
         <p class="ct">10K 接力</p>
-        <p class="cd">2 人各跑 5K・男組／女組／混合組</p>
+        <p class="cd">2 人各跑 5K・不限男女</p>
         <p class="cl">第一棒跑完在起點交棒。第一棒加入第一波、第二棒加入第二波創作。一張表報兩人。</p>
         <p class="cq">每棒預估 30 – 40 分鐘</p>
         <p class="ccount" id="count-10K接力">目前 <b>–</b> 報名</p>
       </div>
     </div>
-    <p class="note">全程計時，成績於活動後公告（不頒獎）。接力組別依兩人性別自動判定。</p>
+    <div class="feebar points">
+      <p class="fk">TEAM POINTS｜戰隊積分</p>
+      <p class="fv">各組前三名：第一名 <b>+3</b>・第二名 <b>+2</b>・第三名 <b>+1</b>，戰隊教練到場再 <b>+1</b></p>
+      <p class="fn">全程計時，計分組別：5K 男／女、10K 男／女、10K 接力（不限男女）。12 月底統計全年最強戰隊，由該班級帶走最終獎勵。</p>
+    </div>
     <p class="totalcount" id="count-total">目前已有 <b>–</b> 人報名。</p>
     <div class="feebar">
       <p class="fk">FEE｜三組同價・每人計</p>
@@ -421,11 +426,11 @@ footer a{color:var(--y)}
             </label>
             <label class="pick">
               <input type="radio" name="category" value="10K接力" />
-              <span class="box"><span class="pt">10K 接力</span><span class="pd">2 人各跑 5K</span><span class="pm">男組・女組・混合組</span></span>
+              <span class="box"><span class="pt">10K 接力</span><span class="pd">2 人各跑 5K</span><span class="pm">不限男女</span></span>
               <span class="tick">✓</span>
             </label>
           </div>
-          <p class="hint">全程計時，成績於活動後公告（不頒獎）。</p>
+          <p class="hint">全程計時，各組前三名為所屬戰隊累積積分。</p>
           <p class="err" data-for="category">請選擇組別</p>
         </div>
 
@@ -433,10 +438,9 @@ footer a{color:var(--y)}
           <div class="field">
             <label for="teamName">接力隊名 <span class="req">*</span></label>
             <input type="text" id="teamName" name="teamName" maxlength="30" autocomplete="off" placeholder="例如：凱為雙子星" />
-            <p class="hint">一張表報兩個人：填好第一棒、第二棒的資料，確認信會分別寄給兩位。接力組別依兩人性別自動判定。</p>
+            <p class="hint">一張表報兩個人：填好第一棒、第二棒的資料，確認信會分別寄給兩位。接力不限男女。</p>
             <p class="err" data-for="teamName">請填寫接力隊名</p>
           </div>
-          <p class="relay-group" id="relayGroup">接力組別：<b>選好兩人性別後自動判定</b></p>
         </div>
 
         <fieldset class="runner" data-leg="1">
@@ -607,7 +611,7 @@ footer a{color:var(--y)}
             <ul>
               <li><b>本活動未投保任何保險</b>，主辦單位未為本活動投保公共意外責任險或團體平安險。參加者請自行評估運動風險並斟酌自行投保；活動期間若發生意外，工作人員會協助現場處置與緊急聯絡，但本活動不提供保險理賠。</li>
               <li>本活動於河濱自行車道與步道進行，<b>不進行交通管制</b>。請靠右跑、留意自行車與行人，聽從 NID 教練團隊的帶隊指示。</li>
-              <li>全程計時，成績於活動後公告，<b>不頒獎</b>。接力組於起終點交棒，請第二棒提前到交棒區等候。</li>
+              <li>全程計時，成績於活動後公告；<b>各組前三名為所屬戰隊累積積分</b>。接力組於起終點交棒，請第二棒提前到交棒區等候。</li>
               <li>請自行評估身體狀況，有心血管疾病、近期受傷或身體不適者請勿勉強參加。活動中如有不適請立即向工作人員反映。</li>
               <li>塗鴉創作會使用<b>噴漆</b>，現場提供手套與口罩。請穿可以弄髒的衣服；對油漆氣味敏感或有呼吸道疾病者，請於報到時告知。</li>
               <li>報名資料僅供本次活動聯繫、分組、計時與名單管理使用，活動結束後依規定銷毀。</li>
@@ -760,25 +764,14 @@ footer a{color:var(--y)}
     if (club !== NON_MEMBER_LABEL) return 0;
     return FEE_NON_MEMBER[cat] || 0;
   }
-  function relayGroup(g1, g2) {
-    if (!g1 || !g2) return "";
-    if (g1 === "男" && g2 === "男") return "男組";
-    if (g1 === "女" && g2 === "女") return "女組";
-    return "混合組";
-  }
 
   /* ── 組別切換：接力組才顯示隊名與第二棒 ── */
   function syncCategory() {
     var relay = isRelay();
     document.body.classList.toggle("is-relay", relay);
     form.querySelectorAll('[data-leg="2"] input, [data-leg="2"] select, #teamName').forEach(function (el) { el.disabled = !relay || REG_CLOSED; });
-    updateRelayGroup();
     updateFee();
     syncFullState();
-  }
-  function updateRelayGroup() {
-    var g = relayGroup(selected("gender"), selected("gender2"));
-    document.getElementById("relayGroup").innerHTML = "接力組別：<b>" + (g || "選好兩人性別後自動判定") + "</b>";
   }
 
   /* ── 費用即時試算：金額取決於「組別」與「戰隊」，接力兩人分開算 ── */
@@ -888,7 +881,7 @@ footer a{color:var(--y)}
   });
   ["gender", "gender2"].forEach(function (n) {
     form.querySelectorAll('input[name="' + n + '"]').forEach(function (r) {
-      r.addEventListener("change", function () { showErr(n, false); updateRelayGroup(); });
+      r.addEventListener("change", function () { showErr(n, false); });
     });
   });
   form.querySelectorAll('input[name="theme1"]').forEach(function (r) {
@@ -994,7 +987,7 @@ footer a{color:var(--y)}
       document.getElementById("deadlineNote").style.display = "none";
       if (relay) {
         document.getElementById("successMsg").innerHTML =
-          "「" + esc(payload.teamName) + "」報名成功（10K 接力・" + esc(rg || relayGroup(r1.gender, r2.gender)) + "）！<br />" +
+          "「" + esc(payload.teamName) + "」報名成功（10K 接力）！<br />" +
           "確認信會分別寄給 <b>" + esc(r1.name) + "</b> 和 <b>" + esc(r2.name) + "</b>。<br />" +
           "塗鴉組別會在活動前通知，當天 <b>09:00</b> 到<b>成功橋下（成美右岸河濱）</b>報到。<br />" +
           "現場有攝影師，活動結束後會分享照片連結 📸";
