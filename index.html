@@ -113,6 +113,38 @@ a{color:inherit}
 .tcard .te{display:flex;flex-wrap:wrap;gap:5px}
 .tcard .te span{background:var(--ink);color:var(--paper);font-size:12px;padding:1px 10px;border-radius:999px}
 
+/* COLOR YOUR RUN */
+.cyr-sub{font-family:var(--mark);font-size:clamp(19px,3.4vw,26px);line-height:1.4;margin:0 0 26px}
+.cyr-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:0 0 34px;border:4px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:7px 7px 0 var(--ink)}
+.cyr-step{padding:18px 18px 20px;color:var(--ink)}
+.cyr-step:nth-child(1){background:var(--o)}
+.cyr-step:nth-child(2){background:var(--p);border-left:4px solid var(--ink)}
+.cyr-step:nth-child(3){background:var(--g);border-left:4px solid var(--ink)}
+.cyr-step .sn{font-family:var(--disp);font-size:13px;letter-spacing:.2em;margin:0}
+.cyr-step .sk{font-family:var(--disp);font-size:40px;line-height:1;margin:4px 0 8px}
+.cyr-step .sd{font-size:15px;font-weight:500;margin:0}
+.cyr-h{font-family:var(--disp);font-size:22px;letter-spacing:.12em;margin:34px 0 4px}
+.cyr-hz{font-size:15px;margin:0}
+.tcard .tk{font-family:var(--disp);font-size:12px;letter-spacing:.2em;margin:0 0 6px}
+.cyr-color{margin:30px 0 0;background:var(--ink);color:var(--paper);border-radius:18px;padding:20px 22px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.cyr-color .cc-t{font-family:var(--disp);font-size:22px;letter-spacing:.1em;color:var(--y);margin:0}
+.cyr-color .cc-d{font-size:15px;margin:2px 0 0;color:#E7E3D6}
+.cyr-sw{display:flex;gap:8px;flex-wrap:wrap}
+.cyr-sw span{width:30px;height:30px;border-radius:50%;border:3px solid var(--paper)}
+.cyr-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:16px 0 0}
+.cyr-rule{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:16px 18px}
+.cyr-rule .rt{font-weight:900;font-size:19px;margin:0 0 2px}
+.cyr-rule .rb{display:inline-block;font-family:var(--disp);font-size:13px;letter-spacing:.12em;background:var(--ink);color:var(--y);padding:2px 10px;border-radius:999px;margin:0 0 8px}
+.cyr-rule.relay{background:var(--ink);color:var(--paper)}
+.cyr-rule.relay .rb{background:var(--y);color:var(--ink)}
+.cyr-rule .rd{font-size:15px;margin:0}
+.cyr-notes{margin:22px 0 0;padding:0 0 0 20px;font-size:15px}
+.cyr-notes li{margin:0 0 6px}
+@media (max-width:720px){
+  .cyr-steps,.cyr-rules{grid-template-columns:1fr}
+  .cyr-step:nth-child(n+2){border-left:0;border-top:4px solid var(--ink)}
+}
+
 /* FLOW */
 .tl{list-style:none;margin:20px 0 0;padding:0;border-left:4px solid var(--ink)}
 .tl li{position:relative;padding:0 0 18px 26px}
@@ -260,7 +292,7 @@ footer a{color:var(--y)}
     <p class="sec-eyebrow">W H Y　R U N N E R　W A L L</p>
     <h2 class="sec-title">跑步讓我們聚在一起，<br />塗鴉讓我們留下痕跡。</h2>
     <p class="p">每個人對跑步都有不同的想像 —— 速度、突破、陪伴、挑戰。這次 Family Day，我們把這些跑步精神變成四個創作主題。</p>
-    <p class="p">跑完 5K 或 10K 回到起點，各組在塗鴉藝術家的帶領下接力上牆，完成自己的區塊，最後拼成一面完整的 NID RUNNER WALL。</p>
+    <p class="p">在折返點抽出你的主題，跑回起點就到那一區上牆，最後由塗鴉藝術家把大家的創意整合成一面完整的 NID RUNNER WALL。</p>
     <p class="pull">不需要會畫畫，只需要一起跑完、一起動手。</p>
     <div class="kws">
       <span class="kw" style="background:var(--ink);color:var(--y)">RUNNING</span>
@@ -311,21 +343,21 @@ footer a{color:var(--y)}
       <div class="catcard">
         <p class="ct">5K 個人</p>
         <p class="cd">往返一趟・男子組／女子組</p>
-        <p class="cl">由 NID 教練團隊帶跑，回到起點後先上牆，負責第一波創作。</p>
+        <p class="cl">由 NID 教練團隊帶跑，在折返點抽主題卡，回到起點就上牆。</p>
         <p class="cq">預估 30 – 40 分鐘</p>
         <p class="ccount" id="count-5K個人">目前 <b>–</b> 報名</p>
       </div>
       <div class="catcard ten">
         <p class="ct">10K 個人</p>
         <p class="cd">同路線往返兩趟・男子組／女子組</p>
-        <p class="cl">經過起點時大家幫忙加油，回場後接手第二波，完成整面牆。</p>
+        <p class="cl">第二次經過折返點時抽主題卡；經過起點時大家幫忙加油，回場就上牆。</p>
         <p class="cq">預估 55 – 70 分鐘</p>
         <p class="ccount" id="count-10K個人">目前 <b>–</b> 報名</p>
       </div>
       <div class="catcard relay">
         <p class="ct">10K 接力</p>
         <p class="cd">2 人各跑 5K・不限男女</p>
-        <p class="cl">第一棒跑完在起點交棒。第一棒加入第一波、第二棒加入第二波創作。一張表報兩人。</p>
+        <p class="cl">第一棒在折返點抽主題卡，跑完在起點交棒；第二棒跑完到同一個牆區一起創作。一張表報兩人。</p>
         <p class="cq">每棒預估 30 – 40 分鐘</p>
         <p class="ccount" id="count-10K接力">目前 <b>–</b> 報名</p>
       </div>
@@ -348,37 +380,73 @@ footer a{color:var(--y)}
   </div>
 </section>
 
-<section class="block yellow">
+<section class="block yellow" id="color-your-run">
   <div class="wrap">
-    <p class="sec-eyebrow">T H E M E S</p>
-    <h2 class="sec-title">四個主題，四面牆區</h2>
-    <p class="p">報名時選第一、第二志願，每個主題上限 25 人，額滿時依第二志願排組。主辦方會依志願、跑步距離和同行者排組，讓每組都有 5K 和 10K 的人接力，家人朋友也盡量排在一起。分組結果會在活動前通知，報到時也可以再跟工作人員確認自己的組。</p>
+    <p class="sec-eyebrow">C O L O R　Y O U R　R U N</p>
+    <h2 class="sec-title">COLOR YOUR RUN｜跑出你的色彩</h2>
+    <p class="cyr-sub">抽出你的主題，帶回你的創意，一起完成作品。</p>
+    <div class="cyr-steps">
+      <div class="cyr-step"><p class="sn">STEP 01</p><p class="sk">RUN</p><p class="sd">跑到折返點：彩虹河濱公園少棒場。</p></div>
+      <div class="cyr-step"><p class="sn">STEP 02</p><p class="sk">DRAW</p><p class="sd">在折返點抽一張主題卡，決定你回去要畫什麼。</p></div>
+      <div class="cyr-step"><p class="sn">STEP 03</p><p class="sk">CREATE</p><p class="sd">跑回會場，直接到抽中的主題牆區上牆創作。</p></div>
+    </div>
+
+    <p class="cyr-h">THEME CARD｜主題卡</p>
+    <p class="cyr-hz">四種主題，對應牆上的四個區塊。抽到哪一張，就到哪一區。</p>
     <div class="theme-grid">
       <div class="tcard">
+        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="70,6 22,68 54,68 40,114 98,44 64,44 82,6" fill="#241915"/><path d="M4 40 H24 M0 58 H18 M8 76 H26" stroke="#241915" stroke-width="6" stroke-linecap="round"/></svg>
         <p class="tn">SPEED</p><p class="tz">速度</p>
-        <p class="td">突破自我・追求速度・挑戰極限</p>
+        <p class="td">呈現速度感、突破與爆發力</p>
         <div class="te"><span>閃電</span><span>速度線</span><span>跑鞋</span><span>賽道</span><span>計時器</span></div>
       </div>
       <div class="tcard">
+        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6 C 72 34, 100 44, 96 78 C 93 102, 76 114, 60 114 C 40 114, 24 100, 24 78 C 24 58, 40 50, 42 30 C 52 40, 54 50, 52 60 C 66 50, 66 26, 60 6 Z" fill="#241915"/><path d="M60 64 C 68 76, 76 82, 74 96 C 72 106, 64 110, 60 110 C 52 110, 46 104, 46 96 C 46 86, 56 82, 60 64 Z" fill="#FF6B2C"/></svg>
         <p class="tn">ENERGY</p><p class="tz">能量</p>
-        <p class="td">熱情・活力・持續前進</p>
+        <p class="td">呈現熱情、活力與動態</p>
         <div class="te"><span>火焰</span><span>太陽</span><span>能量波</span><span>爆炸圖形</span><span>色彩噴濺</span></div>
       </div>
       <div class="tcard">
+        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="4,112 44,48 64,78 80,58 116,112" fill="#241915"/><polygon points="78,4 84,22 102,22 88,33 93,50 78,40 63,50 68,33 54,22 72,22" fill="#241915"/></svg>
         <p class="tn">GOAL</p><p class="tz">目標</p>
-        <p class="td">目標・想像・挑戰與未來</p>
+        <p class="td">呈現挑戰、成就與終點</p>
         <div class="te"><span>星星</span><span>翅膀</span><span>山峰</span><span>皇冠</span><span>箭頭</span></div>
       </div>
       <div class="tcard">
+        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="34" r="14" fill="#241915"/><circle cx="60" cy="26" r="16" fill="#241915"/><circle cx="90" cy="34" r="14" fill="#241915"/><rect x="12" y="54" width="36" height="56" rx="16" fill="#241915"/><rect x="40" y="48" width="40" height="64" rx="18" fill="#241915"/><rect x="72" y="54" width="36" height="56" rx="16" fill="#241915"/></svg>
         <p class="tn">TOGETHER</p><p class="tz">團隊</p>
-        <p class="td">陪伴・合作・信任與支持</p>
+        <p class="td">呈現合作、陪伴與連結</p>
         <div class="te"><span>握手</span><span>人物</span><span>團隊剪影</span><span>連結線條</span><span>愛心</span></div>
       </div>
     </div>
+
+    <div class="cyr-color">
+      <div style="flex:1;min-width:220px">
+        <p class="cc-t">COLOR｜顏色自由搭配</p>
+        <p class="cc-d">顏色不用抽。各牆區準備多種顏色，用你想要的色彩表現抽到的主題。</p>
+      </div>
+      <div class="cyr-sw" aria-hidden="true">
+        <span style="background:#FADF4B"></span><span style="background:#FF6B2C"></span><span style="background:#A274FF"></span><span style="background:#C6F432"></span><span style="background:#4FB3FF"></span><span style="background:#FF6FB5"></span><span style="background:#FFFFFF"></span><span style="background:#111111"></span>
+      </div>
+    </div>
+
+    <p class="cyr-h">誰來抽卡？</p>
+    <div class="cyr-rules">
+      <div class="cyr-rule"><p class="rt">5K 個人</p><span class="rb">每人 1 張</span><p class="rd">抵達折返點時，自己抽一張主題卡。</p></div>
+      <div class="cyr-rule"><p class="rt">10K 個人</p><span class="rb">每人 1 張</span><p class="rd">第二次經過折返點時抽，避開第一圈的人潮。</p></div>
+      <div class="cyr-rule relay"><p class="rt">10K 接力</p><span class="rb">每隊 1 張</span><p class="rd">由第一棒在折返點抽卡，第二棒不用抽；第二棒跑完到同一個牆區，兩人一起創作。</p></div>
+    </div>
+
+    <ul class="cyr-notes">
+      <li>抽卡時計時不停，抽完繼續跑。主題卡請帶回會場，它就是你的上牆通行證。</li>
+      <li>每個主題的卡片數量固定，抽完為止，四個牆區的人數會很平均。</li>
+      <li>塗鴉藝術家會先在各區畫好輪廓，最後統一收邊，把大家的創意整合成一面完整的作品。</li>
+      <li>一起來的家人朋友不跑步也沒關係，可以跟著你到同一個牆區一起創作。</li>
+    </ul>
   </div>
 </section>
 
@@ -400,12 +468,12 @@ footer a{color:var(--y)}
           <div class="pickgrid three">
             <label class="pick">
               <input type="radio" name="category" value="5K個人" />
-              <span class="box"><span class="pt">5K 個人</span><span class="pd">男子組・女子組</span><span class="pm">第一波創作</span></span>
+              <span class="box"><span class="pt">5K 個人</span><span class="pd">男子組・女子組</span><span class="pm">折返點抽卡</span></span>
               <span class="tick">✓</span>
             </label>
             <label class="pick">
               <input type="radio" name="category" value="10K個人" />
-              <span class="box"><span class="pt">10K 個人</span><span class="pd">男子組・女子組</span><span class="pm">第二波創作</span></span>
+              <span class="box"><span class="pt">10K 個人</span><span class="pd">男子組・女子組</span><span class="pm">折返點抽卡</span></span>
               <span class="tick">✓</span>
             </label>
             <label class="pick">
@@ -563,30 +631,9 @@ footer a{color:var(--y)}
         </div>
 
         <div class="field">
-          <span class="lbl">塗鴉主題・第一志願 <span class="req">*</span> <span class="opt">（每個主題上限 25 人）</span></span>
-          <div class="themegrid">
-            <label class="pick"><input type="radio" name="theme1" value="SPEED" /><span class="box"><span class="pt">SPEED</span><span class="pm">速度</span></span></label>
-            <label class="pick"><input type="radio" name="theme1" value="ENERGY" /><span class="box"><span class="pt">ENERGY</span><span class="pm">能量</span></span></label>
-            <label class="pick"><input type="radio" name="theme1" value="GOAL" /><span class="box"><span class="pt">GOAL</span><span class="pm">目標</span></span></label>
-            <label class="pick"><input type="radio" name="theme1" value="TOGETHER" /><span class="box"><span class="pt">TOGETHER</span><span class="pm">團隊</span></span></label>
-          </div>
-          <p class="hint relay-only">接力兩位隊員會排在同一個塗鴉組。</p>
-          <p class="err" data-for="theme1">請選擇第一志願</p>
-        </div>
-
-        <div class="field">
-          <label for="theme2">塗鴉主題・第二志願 <span class="req">*</span></label>
-          <select id="theme2" name="theme2">
-            <option value="">請先選第一志願</option>
-          </select>
-          <p class="hint">每個主題上限 25 人，額滿時會依第二志願排組。</p>
-          <p class="err" data-for="theme2">請選擇和第一志願不同的第二志願</p>
-        </div>
-
-        <div class="field">
           <label for="companion">同行者 <span class="opt">（選填）</span></label>
-          <input type="text" id="companion" name="companion" autocomplete="off" maxlength="200" placeholder="想排在同一組的家人或朋友姓名，例如：王小明、王小美" />
-          <p class="hint">對方也要各自報名。我們會盡量把你們排在同一組。</p>
+          <input type="text" id="companion" name="companion" autocomplete="off" maxlength="200" placeholder="一起來的家人或朋友姓名，例如：王小明、王小美" />
+          <p class="hint">要跑步的人請各自報名；不跑步的家人朋友可以跟著你到同一個牆區一起創作。</p>
         </div>
 
         <details class="waiver">
@@ -620,7 +667,7 @@ footer a{color:var(--y)}
         <h3>YOU'RE IN!</h3>
         <p id="successMsg">
           報名成功！確認信會在幾分鐘內寄到你的信箱。<br />
-          塗鴉組別會在活動前通知，當天 <b>09:00</b> 到<b>成功橋下（成美右岸河濱）</b>報到。<br />
+          塗鴉主題在折返點抽卡決定，當天 <b>09:00</b> 到<b>成功橋下（成美右岸河濱）</b>報到。<br />
           現場有攝影師，活動結束後會分享照片連結 📸
         </p>
         <a class="line-btn" id="lineGroupBtn" href="#" target="_blank" rel="noopener noreferrer">加入活動 LINE 社群</a>
@@ -677,7 +724,6 @@ footer a{color:var(--y)}
   var alertBox      = document.getElementById("alertBox");
   var clubSelect    = document.getElementById("club");
   var club2Select   = document.getElementById("club2");
-  var theme2Select  = document.getElementById("theme2");
   var feeAmountEl   = document.getElementById("feeAmount");
   var feeDetailEl   = document.getElementById("feeDetail");
 
@@ -779,19 +825,6 @@ footer a{color:var(--y)}
     }
   }
 
-  /* ── 第二志願：選項排除第一志願 ── */
-  function updateTheme2() {
-    var t1 = selected("theme1"), keep = theme2Select.value;
-    theme2Select.innerHTML = '<option value="">' + (t1 ? "請選擇第二志願" : "請先選第一志願") + "</option>";
-    THEMES.forEach(function (t) {
-      if (t === t1) return;
-      var o = document.createElement("option");
-      o.value = t; o.textContent = t + "（" + THEME_ZH[t] + "）";
-      theme2Select.appendChild(o);
-    });
-    if (keep && keep !== t1) theme2Select.value = keep;
-  }
-  updateTheme2();
 
   /* ── 報名人數：數字全部從 ?action=count 帶出來，讀不到就不顯示 ── */
   function setSeats(html) {
@@ -868,10 +901,6 @@ footer a{color:var(--y)}
       r.addEventListener("change", function () { showErr(n, false); });
     });
   });
-  form.querySelectorAll('input[name="theme1"]').forEach(function (r) {
-    r.addEventListener("change", function () { showErr("theme1", false); updateTheme2(); });
-  });
-  theme2Select.addEventListener("change", function () { showErr("theme2", false); });
   ["email", "email2"].forEach(function (id) {
     document.getElementById(id).addEventListener("blur", function () {
       var v = this.value.trim();
@@ -938,8 +967,6 @@ footer a{color:var(--y)}
     var r2 = relay ? checkRunner(p, "2", "第二棒") : null;
     if (!r1 || (relay && !r2)) valid = false;
     if (r1 && r2 && r1.email === r2.email) { showErr("email2", true, "兩位隊員要填不同的 Email"); valid = false; }
-    if (!p.theme1) { showErr("theme1", true); valid = false; }
-    if (!p.theme2 || p.theme2 === p.theme1) { showErr("theme2", true); valid = false; }
     if (!p.agree)  { showErr("agree", true);  valid = false; }
 
     if (!valid) {
@@ -958,7 +985,7 @@ footer a{color:var(--y)}
       category: p.category,
       teamName: relay ? p.teamName : "",
       runners: relay ? [r1, r2] : [r1],
-      theme1: p.theme1, theme2: p.theme2, companion: p.companion || ""
+      companion: p.companion || ""
     };
 
     submitBtn.disabled = true;
@@ -973,7 +1000,7 @@ footer a{color:var(--y)}
         document.getElementById("successMsg").innerHTML =
           "「" + esc(payload.teamName) + "」報名成功（10K 接力）！<br />" +
           "確認信會分別寄給 <b>" + esc(r1.name) + "</b> 和 <b>" + esc(r2.name) + "</b>。<br />" +
-          "塗鴉組別會在活動前通知，當天 <b>09:00</b> 到<b>成功橋下（成美右岸河濱）</b>報到。<br />" +
+          "塗鴉主題在折返點抽卡決定，當天 <b>09:00</b> 到<b>成功橋下（成美右岸河濱）</b>報到。<br />" +
           "現場有攝影師，活動結束後會分享照片連結 📸";
       }
       successScreen.classList.add("show");
