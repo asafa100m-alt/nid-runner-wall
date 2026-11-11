@@ -129,8 +129,9 @@ a{color:inherit}
   .cyr-ex{gap:16px}
   .cyr-card{flex-basis:128px}
   .cyr-card .cc-n{font-size:22px}
-  .cyr-colors{grid-template-columns:1fr 1fr}
-  .cyr-colors b{font-size:18px}
+  .cyr-colors{grid-template-columns:repeat(4,1fr);gap:6px}
+  .cyr-colors div{padding:8px 8px;font-size:12px}
+  .cyr-colors b{font-size:15px}
 }
 
 /* PARTNER */
@@ -416,7 +417,7 @@ footer a{color:var(--y)}
         <div class="cc-top"><p class="cc-k">THEME</p><p class="cc-n">GOAL</p><p class="cc-z">目標</p></div>
         <div class="cc-bot"><p class="cc-k">COLOR</p><p class="cc-n">ORANGE</p><p class="cc-z">橘色</p></div>
       </div>
-      <p class="cyr-hz">每張卡同時印著<b>主題</b>和<b>主色</b>，只要抽一張。<br />主題決定你去哪一區，主色決定你用什麼顏色；四種主題 × 四種顏色，共 16 種組合。</p>
+      <p class="cyr-hz">每張卡同時印著<b>主題</b>和<b>主色</b>，只要抽一張。<br />主題決定你去哪一區，主色決定你用什麼顏色；四種主題 × 八種顏色，共 32 種組合。</p>
     </div>
     <p class="cyr-h">THEME｜主題</p>
     <div class="theme-grid">
@@ -448,6 +449,10 @@ footer a{color:var(--y)}
       <div style="background:#FF6B2C"><b>ORANGE</b>橘色</div>
       <div style="background:#A274FF"><b>PURPLE</b>紫色</div>
       <div style="background:#C6F432"><b>GREEN</b>綠色</div>
+      <div style="background:#4FB3FF"><b>BLUE</b>藍色</div>
+      <div style="background:#FF6FB5"><b>PINK</b>粉紅色</div>
+      <div style="background:#FFFFFF"><b>WHITE</b>白色</div>
+      <div style="background:#111111;color:#F3F1EA"><b>BLACK</b>黑色</div>
     </div>
     <p class="cyr-hz" style="margin-top:10px">以抽到的顏色為主色，可以自由搭配其他輔助色。牆區不分固定顏色，主色只看你抽到的卡。</p>
 
