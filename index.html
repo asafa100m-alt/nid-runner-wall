@@ -143,6 +143,16 @@ a{color:inherit}
 .cyr-notes li{margin:0 0 6px}
 @media (max-width:720px){
   .cyr-steps,.cyr-rules{grid-template-columns:1fr}
+  .cyr-step{display:flex;align-items:center;gap:12px;padding:12px 14px}
+  .cyr-step .sn{display:none}
+  .cyr-step .sk{font-size:26px;margin:0;flex:0 0 92px}
+  .cyr-step .sd{font-size:14px}
+  .tcard{padding:14px 14px}
+  .tcard svg{width:44px;height:44px}
+  .tcard .tn{font-size:26px}
+  .cyr-rule{padding:12px 14px}
+  .cyr-sw{gap:6px}
+  .cyr-sw span{width:24px;height:24px}
   .cyr-step:nth-child(n+2){border-left:0;border-top:4px solid var(--ink)}
 }
 
@@ -353,16 +363,7 @@ footer a{color:var(--y)}
     <p class="sec-eyebrow">W H Y　R U N N E R　W A L L</p>
     <h2 class="sec-title">跑步讓我們聚在一起，<br />塗鴉讓我們留下痕跡。</h2>
     <p class="p">每個人對跑步都有不同的想像 —— 速度、突破、陪伴、挑戰。這次 Family Day，我們把這些跑步精神變成四個創作主題。</p>
-    <p class="p">在折返點抽出你的主題，跑回起點就到那一區上牆，最後由塗鴉藝術家把大家的創意整合成一面完整的 NID RUNNER WALL。</p>
     <p class="pull">不需要會畫畫，只需要一起跑完、一起動手。</p>
-    <div class="kws">
-      <span class="kw" style="background:var(--ink);color:var(--y)">RUNNING</span>
-      <span class="kw" style="background:var(--p)">RUNNER</span>
-      <span class="kw" style="background:var(--o)">ENERGY</span>
-      <span class="kw" style="background:var(--g)">TEAMWORK</span>
-      <span class="kw" style="background:var(--ink);color:var(--y)">STREET ART</span>
-      <span class="kw" style="background:#fff">COMMUNITY</span>
-    </div>
   </div>
 </section>
 
@@ -378,35 +379,26 @@ footer a{color:var(--y)}
     </div>
 
     <p class="cyr-h">THEME CARD｜主題卡</p>
-    <p class="cyr-hz">四種主題，對應牆上的四個區塊。抽到哪一張，就到哪一區。</p>
     <div class="theme-grid">
       <div class="tcard">
-        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="70,6 22,68 54,68 40,114 98,44 64,44 82,6" fill="#241915"/><path d="M4 40 H24 M0 58 H18 M8 76 H26" stroke="#241915" stroke-width="6" stroke-linecap="round"/></svg>
         <p class="tn">SPEED</p><p class="tz">速度</p>
         <p class="td">呈現速度感、突破與爆發力</p>
-        <div class="te"><span>閃電</span><span>速度線</span><span>跑鞋</span><span>賽道</span><span>計時器</span></div>
       </div>
       <div class="tcard">
-        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6 C 72 34, 100 44, 96 78 C 93 102, 76 114, 60 114 C 40 114, 24 100, 24 78 C 24 58, 40 50, 42 30 C 52 40, 54 50, 52 60 C 66 50, 66 26, 60 6 Z" fill="#241915"/><path d="M60 64 C 68 76, 76 82, 74 96 C 72 106, 64 110, 60 110 C 52 110, 46 104, 46 96 C 46 86, 56 82, 60 64 Z" fill="#FF6B2C"/></svg>
         <p class="tn">ENERGY</p><p class="tz">能量</p>
         <p class="td">呈現熱情、活力與動態</p>
-        <div class="te"><span>火焰</span><span>太陽</span><span>能量波</span><span>爆炸圖形</span><span>色彩噴濺</span></div>
       </div>
       <div class="tcard">
-        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="4,112 44,48 64,78 80,58 116,112" fill="#241915"/><polygon points="78,4 84,22 102,22 88,33 93,50 78,40 63,50 68,33 54,22 72,22" fill="#241915"/></svg>
         <p class="tn">GOAL</p><p class="tz">目標</p>
         <p class="td">呈現挑戰、成就與終點</p>
-        <div class="te"><span>星星</span><span>翅膀</span><span>山峰</span><span>皇冠</span><span>箭頭</span></div>
       </div>
       <div class="tcard">
-        <p class="tk">THEME CARD</p>
         <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="34" r="14" fill="#241915"/><circle cx="60" cy="26" r="16" fill="#241915"/><circle cx="90" cy="34" r="14" fill="#241915"/><rect x="12" y="54" width="36" height="56" rx="16" fill="#241915"/><rect x="40" y="48" width="40" height="64" rx="18" fill="#241915"/><rect x="72" y="54" width="36" height="56" rx="16" fill="#241915"/></svg>
         <p class="tn">TOGETHER</p><p class="tz">團隊</p>
         <p class="td">呈現合作、陪伴與連結</p>
-        <div class="te"><span>握手</span><span>人物</span><span>團隊剪影</span><span>連結線條</span><span>愛心</span></div>
       </div>
     </div>
 
@@ -430,30 +422,8 @@ footer a{color:var(--y)}
     <ul class="cyr-notes">
       <li>抽卡時計時不停，抽完繼續跑。主題卡請帶回會場，它就是你的上牆通行證。</li>
       <li>每個主題的卡片數量固定，抽完為止，四個牆區的人數會很平均。</li>
-      <li>塗鴉藝術家會先在各區畫好輪廓，最後統一收邊，把大家的創意整合成一面完整的作品。</li>
       <li>一起來的家人朋友不跑步也沒關係，可以跟著你到同一個牆區一起創作。</li>
     </ul>
-  </div>
-</section>
-
-<section class="block cream" id="highlights">
-  <div class="wrap">
-    <p class="sec-eyebrow">H I G H L I G H T S</p>
-    <h2 class="sec-title">活動亮點</h2>
-    <a class="hl-feature" href="#nid-gel">
-      <svg class="hl-ic" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 C 40 18, 52 28, 52 40 A 20 20 0 0 1 12 40 C 12 28, 24 18, 32 4 Z" fill="#FADF4B" stroke="#F3F1EA" stroke-width="3"/><polygon points="35,20 24,40 32,40 28,54 42,32 34,32 38,20" fill="#241915"/></svg>
-      <div>
-        <span class="hl-new">NEW · FIRST TASTE</span>
-        <p class="hl-t"><b>NID GEL 首次亮相</b>｜搶先體驗 NID 即將推出的自有果膠！</p>
-        <p class="hl-more">看新品介紹 ↓</p>
-      </div>
-    </a>
-    <div class="hl-grid">
-      <div class="hl-item" style="background:var(--p)"><p class="hk">COLOR YOUR RUN</p><p class="hd">折返點抽主題卡，回來到主題牆區上牆。</p></div>
-      <div class="hl-item" style="background:var(--g)"><p class="hk">TEAM POINTS</p><p class="hd">全程計時，各組前三名為戰隊累積積分。</p></div>
-      <div class="hl-item" style="background:var(--o)"><p class="hk">STREET ART</p><p class="hd">塗鴉藝術家帶領，一起完成 RUNNER WALL。</p></div>
-      <div class="hl-item"><p class="hk">PHOTO</p><p class="hd">攝影師全程拍攝，活動後提供照片連結。</p></div>
-    </div>
   </div>
 </section>
 
@@ -462,11 +432,6 @@ footer a{color:var(--y)}
     <div class="gel-row">
       <div>
         <p class="sec-eyebrow">N E W　P R O D U C T</p>
-        <div class="gel-tags">
-          <span style="background:var(--y);color:var(--ink)">COMING SOON</span>
-          <span style="background:var(--g);color:var(--ink)">FIRST TASTE</span>
-          <span style="border:2px solid var(--paper)">NID 自有品牌</span>
-        </div>
         <h2 class="gel-title"><em>NID GEL</em><span class="nb">｜FIRST TASTE</span></h2>
         <p class="gel-sub">NID 自有果膠，即將登場！</p>
         <p class="p">不只是跑步，這次也要搶先體驗 NID 的全新產品！</p>
@@ -517,21 +482,21 @@ footer a{color:var(--y)}
       <div class="catcard">
         <p class="ct">5K 個人</p>
         <p class="cd">往返一趟・男子組／女子組</p>
-        <p class="cl">由 NID 教練團隊帶跑，在折返點抽主題卡，回到起點就上牆。</p>
+        <p class="cl">由 NID 教練團隊帶跑。</p>
         <p class="cq">預估 30 – 40 分鐘</p>
         <p class="ccount" id="count-5K個人">目前 <b>–</b> 報名</p>
       </div>
       <div class="catcard ten">
         <p class="ct">10K 個人</p>
         <p class="cd">同路線往返兩趟・男子組／女子組</p>
-        <p class="cl">第二次經過折返點時抽主題卡；經過起點時大家幫忙加油，回場就上牆。</p>
+        <p class="cl">經過起點時大家幫忙加油。</p>
         <p class="cq">預估 55 – 70 分鐘</p>
         <p class="ccount" id="count-10K個人">目前 <b>–</b> 報名</p>
       </div>
       <div class="catcard relay">
         <p class="ct">10K 接力</p>
         <p class="cd">2 人各跑 5K・不限男女</p>
-        <p class="cl">第一棒在折返點抽主題卡，跑完在起點交棒；第二棒跑完到同一個牆區一起創作。一張表報兩人。</p>
+        <p class="cl">第一棒跑完在起點交棒，一張表報兩人。</p>
         <p class="cq">每棒預估 30 – 40 分鐘</p>
         <p class="ccount" id="count-10K接力">目前 <b>–</b> 報名</p>
       </div>
