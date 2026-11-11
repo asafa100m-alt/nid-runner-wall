@@ -146,20 +146,16 @@ a{color:inherit}
   .cyr-step:nth-child(n+2){border-left:0;border-top:4px solid var(--ink)}
 }
 
-/* TOP BAR · NID GEL */
-.topbar{display:block;background:var(--ink);color:var(--paper);text-decoration:none;border-bottom:4px solid var(--o)}
-.topbar .wrap{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;text-align:center}
-.topbar .tb-new{font-family:var(--disp);font-size:13px;letter-spacing:.2em;background:var(--g);color:var(--ink);padding:1px 10px;border-radius:999px}
-.topbar .tb-t{font-size:15px;font-weight:700}
-.topbar .tb-t b{color:var(--y)}
-.topbar .tb-go{font-size:14px;color:var(--y);white-space:nowrap}
-.topbar:hover .tb-go{text-decoration:underline}
-@media (max-width:720px){
-  .topbar .wrap{display:block;padding-top:8px;padding-bottom:8px;line-height:1.5}
-  .topbar .tb-new{font-size:11px;margin-right:6px}
-  .topbar .tb-t{font-size:13px}
-  .topbar .tb-go{display:none}
-}
+/* HERO · NID GEL */
+.hero-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero-gel{display:flex;align-items:center;gap:12px;background:#fff;color:var(--ink);text-decoration:none;border:3px solid var(--ink);border-radius:16px;padding:10px 16px 10px 12px;box-shadow:5px 5px 0 var(--p);transform:rotate(1.5deg);max-width:380px}
+.hero-gel:hover{transform:rotate(1.5deg) translate(-2px,-2px)}
+.hero-gel svg{flex:0 0 42px;width:42px;height:42px}
+.hero-gel .hg-new{display:inline-block;font-family:var(--disp);font-size:11px;letter-spacing:.2em;background:var(--g);padding:0 8px;border-radius:999px;margin:0 6px 0 0;vertical-align:2px}
+.hero-gel .hg-t{font-weight:900;font-size:17px;line-height:1.35;margin:0}
+.hero-gel .hg-d{font-size:13px;line-height:1.45;margin:2px 0 0}
+.hero-gel .hg-d b{color:#d4501a;white-space:nowrap}
+@media (max-width:720px){.hero-row{gap:16px}.hero-gel{transform:none;max-width:none}.hero-gel:hover{transform:translate(-2px,-2px)}}
 
 /* HIGHLIGHTS */
 .hl-feature{display:flex;gap:18px;align-items:center;background:var(--ink);color:var(--paper);border:4px solid var(--ink);border-radius:20px;padding:20px 22px;box-shadow:8px 8px 0 var(--o);text-decoration:none;margin:0 0 22px}
@@ -301,14 +297,6 @@ footer a{color:var(--y)}
 </head>
 <body>
 
-<a class="topbar" href="#nid-gel">
-  <div class="wrap">
-    <span class="tb-new">NEW</span>
-    <span class="tb-t"><b>NID GEL 首次亮相</b>｜搶先體驗 NID 即將推出的自有果膠！</span>
-    <span class="tb-go">看新品 →</span>
-  </div>
-</a>
-
 <header class="hero">
   <svg class="hero-art" viewBox="0 0 720 620" aria-hidden="true">
     <defs>
@@ -336,7 +324,16 @@ footer a{color:var(--y)}
     <h1>RUNNER WALL</h1>
     <h2>跑者塗鴉<small>5K 個人・10K 個人・10K 接力 × 一起完成一面塗鴉牆</small></h2>
     <p class="tape">RUN TOGETHER. CREATE TOGETHER.</p><br />
-    <a class="cta" href="#register">我要報名 →</a>
+    <div class="hero-row">
+      <a class="cta" href="#register">我要報名 →</a>
+      <a class="hero-gel" href="#nid-gel">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 C 40 18, 52 28, 52 40 A 20 20 0 0 1 12 40 C 12 28, 24 18, 32 4 Z" fill="#FADF4B" stroke="#241915" stroke-width="3"/><polygon points="35,20 24,40 32,40 28,54 42,32 34,32 38,20" fill="#241915"/></svg>
+        <div>
+          <p class="hg-t"><span class="hg-new">NEW</span>NID GEL 首次亮相</p>
+          <p class="hg-d">搶先體驗 NID 即將推出的自有果膠！<b>看新品 →</b></p>
+        </div>
+      </a>
+    </div>
     <p class="deadline" id="heroDeadline">⏳ 報名至 <b data-close-short>–</b> 截止・<span id="heroSeats">額滿即關閉</span></p>
   </div>
 </header>
