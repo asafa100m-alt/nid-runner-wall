@@ -87,6 +87,7 @@ a{color:inherit}
 .catcard .cq{font-size:14px;color:var(--mute-d);margin:0}
 .ccount{display:none;margin:12px 0 0;font-size:14px;font-weight:700;background:var(--ink);border-radius:999px;padding:4px 14px;width:max-content}
 .ccount.show{display:block}
+.pick .ccount{color:var(--y);font-size:12px;padding:2px 10px;margin:8px 0 0}
 .mapshot{display:block;margin:20px 0 0;text-decoration:none;max-width:620px}
 .mapshot img{width:100%;height:auto;border:4px solid var(--y);border-radius:16px;box-shadow:8px 8px 0 var(--o)}
 .mapshot span{display:inline-block;margin:14px 0 0;font-weight:700;color:var(--y);border-bottom:2px solid var(--y)}
@@ -112,6 +113,31 @@ a{color:inherit}
 .tcard .td{font-size:14px;margin:0 0 10px;font-weight:500}
 .tcard .te{display:flex;flex-wrap:wrap;gap:5px}
 .tcard .te span{background:var(--ink);color:var(--paper);font-size:12px;padding:1px 10px;border-radius:999px}
+
+/* COLOR YOUR RUN · combined card */
+#color-your-run .tcard{background:#fff}
+.cyr-ex{display:flex;gap:22px;align-items:center;margin:10px 0 0}
+.cyr-card{flex:0 0 170px;border:4px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:6px 6px 0 var(--ink);transform:rotate(-3deg);background:#fff}
+.cyr-card .cc-top{padding:10px 14px;background:#fff}
+.cyr-card .cc-bot{padding:10px 14px;background:var(--o);border-top:4px solid var(--ink)}
+.cyr-card .cc-k{font-family:var(--disp);font-size:11px;letter-spacing:.2em;margin:0}
+.cyr-card .cc-n{font-family:var(--disp);font-size:30px;line-height:1;margin:2px 0 0}
+.cyr-card .cc-z{font-size:13px;font-weight:900;margin:0}
+.cyr-colors{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0 0}
+.cyr-colors div{border:3px solid var(--ink);border-radius:14px;padding:12px 14px;font-size:14px;font-weight:700;line-height:1.3}
+.cyr-colors b{display:block;font-family:var(--disp);font-weight:400;font-size:22px;letter-spacing:.04em}
+@media (max-width:720px){
+  .cyr-ex{gap:16px}
+  .cyr-card{flex-basis:128px}
+  .cyr-card .cc-n{font-size:22px}
+  .cyr-colors{grid-template-columns:1fr 1fr}
+  .cyr-colors b{font-size:18px}
+}
+
+/* WHY (compact) */
+.why{padding:44px 0 40px}
+.why .sec-title{font-size:clamp(24px,4.6vw,36px);margin:0 0 12px}
+.why .p{margin:0}
 
 /* COLOR YOUR RUN */
 .cyr-en{letter-spacing:-.04em}
@@ -340,7 +366,7 @@ footer a{color:var(--y)}
         <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 C 40 18, 52 28, 52 40 A 20 20 0 0 1 12 40 C 12 28, 24 18, 32 4 Z" fill="#FADF4B" stroke="#241915" stroke-width="3"/><polygon points="35,20 24,40 32,40 28,54 42,32 34,32 38,20" fill="#241915"/></svg>
         <div>
           <p class="hg-t"><span class="hg-new">NEW</span>NID GEL 首次亮相</p>
-          <p class="hg-d">搶先體驗 NID 即將推出的自有果膠！<b>看新品 →</b></p>
+          <p class="hg-d">搶先體驗 NID 即將推出的自有果膠！</p>
         </div>
       </a>
     </div>
@@ -357,13 +383,11 @@ footer a{color:var(--y)}
   </div>
 </div>
 
-<section class="block cream">
-  <svg class="splat" viewBox="0 0 300 130" aria-hidden="true"><circle cx="200" cy="58" r="56" fill="#FF6B2C" opacity=".75"/><circle cx="258" cy="38" r="36" fill="#A274FF" opacity=".75"/><circle cx="140" cy="40" r="30" fill="#C6F432"/><rect x="196" y="78" width="8" height="40" rx="4" fill="#FF6B2C"/><circle cx="200" cy="120" r="6" fill="#FF6B2C"/><circle cx="110" cy="80" r="5" fill="#A274FF"/><circle cx="286" cy="92" r="6" fill="#C6F432"/></svg>
+<section class="block cream why">
   <div class="wrap">
     <p class="sec-eyebrow">W H Y　R U N N E R　W A L L</p>
     <h2 class="sec-title">跑步讓我們聚在一起，<br />塗鴉讓我們留下痕跡。</h2>
-    <p class="p">每個人對跑步都有不同的想像 —— 速度、突破、陪伴、挑戰。這次 Family Day，我們把這些跑步精神變成四個創作主題。</p>
-    <p class="pull">不需要會畫畫，只需要一起跑完、一起動手。</p>
+    <p class="p">每個人對跑步都有不同的想像 —— 速度、突破、陪伴、挑戰。這次 Family Day，我們把這些跑步精神變成四個創作主題。<b>不需要會畫畫，只需要一起跑完、一起動手。</b></p>
   </div>
 </section>
 
@@ -371,14 +395,22 @@ footer a{color:var(--y)}
   <div class="wrap">
     <p class="sec-eyebrow">C O L O R　Y O U R　R U N</p>
     <h2 class="sec-title"><span class="cyr-en">COLOR YOUR RUN</span>｜跑出你的色彩</h2>
-    <p class="cyr-sub">抽出你的主題，帶回你的創意，一起完成作品。</p>
+    <p class="cyr-sub">抽出你的主題與色彩，帶回你的創意，一起完成作品。</p>
     <div class="cyr-steps">
       <div class="cyr-step"><p class="sn">STEP 01</p><p class="sk">RUN</p><p class="sd">跑到折返點：彩虹河濱公園少棒場。</p></div>
-      <div class="cyr-step"><p class="sn">STEP 02</p><p class="sk">DRAW</p><p class="sd">在折返點抽一張主題卡，決定你回去要畫什麼。</p></div>
-      <div class="cyr-step"><p class="sn">STEP 03</p><p class="sk">CREATE</p><p class="sd">跑回會場，直接到抽中的主題牆區上牆創作。</p></div>
+      <div class="cyr-step"><p class="sn">STEP 02</p><p class="sk">DRAW</p><p class="sd">在折返點抽一張卡，同時決定主題和主色。</p></div>
+      <div class="cyr-step"><p class="sn">STEP 03</p><p class="sk">CREATE</p><p class="sd">跑回會場，到卡上的主題牆區，用卡上的主色上牆。</p></div>
     </div>
 
-    <p class="cyr-h">THEME CARD｜主題卡</p>
+    <p class="cyr-h">DRAW CARD｜一張卡＝主題＋顏色</p>
+    <div class="cyr-ex">
+      <div class="cyr-card" aria-label="抽卡示意：GOAL 目標 × ORANGE 橘色">
+        <div class="cc-top"><p class="cc-k">THEME</p><p class="cc-n">GOAL</p><p class="cc-z">目標</p></div>
+        <div class="cc-bot"><p class="cc-k">COLOR</p><p class="cc-n">ORANGE</p><p class="cc-z">橘色</p></div>
+      </div>
+      <p class="cyr-hz">每張卡同時印著<b>主題</b>和<b>主色</b>，只要抽一張。<br />主題決定你去哪一區，主色決定你用什麼顏色；四種主題 × 四種顏色，共 16 種組合。</p>
+    </div>
+    <p class="cyr-h">THEME｜主題</p>
     <div class="theme-grid">
       <div class="tcard">
         <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="70,6 22,68 54,68 40,114 98,44 64,44 82,6" fill="#241915"/><path d="M4 40 H24 M0 58 H18 M8 76 H26" stroke="#241915" stroke-width="6" stroke-linecap="round"/></svg>
@@ -402,26 +434,25 @@ footer a{color:var(--y)}
       </div>
     </div>
 
-    <div class="cyr-color">
-      <div style="flex:1;min-width:220px">
-        <p class="cc-t">COLOR｜顏色自由搭配</p>
-        <p class="cc-d">顏色不用抽。各牆區準備多種顏色，用你想要的色彩表現抽到的主題。</p>
-      </div>
-      <div class="cyr-sw" aria-hidden="true">
-        <span style="background:#FADF4B"></span><span style="background:#FF6B2C"></span><span style="background:#A274FF"></span><span style="background:#C6F432"></span><span style="background:#4FB3FF"></span><span style="background:#FF6FB5"></span><span style="background:#FFFFFF"></span><span style="background:#111111"></span>
-      </div>
+    <p class="cyr-h">COLOR｜主色</p>
+    <div class="cyr-colors">
+      <div style="background:#FADF4B"><b>YELLOW</b>黃色</div>
+      <div style="background:#FF6B2C"><b>ORANGE</b>橘色</div>
+      <div style="background:#A274FF"><b>PURPLE</b>紫色</div>
+      <div style="background:#C6F432"><b>GREEN</b>綠色</div>
     </div>
+    <p class="cyr-hz" style="margin-top:10px">以抽到的顏色為主色，可以自由搭配其他輔助色。</p>
 
     <p class="cyr-h">誰來抽卡？</p>
     <div class="cyr-rules">
-      <div class="cyr-rule"><p class="rt">5K 個人</p><span class="rb">每人 1 張</span><p class="rd">抵達折返點時，自己抽一張主題卡。</p></div>
+      <div class="cyr-rule"><p class="rt">5K 個人</p><span class="rb">每人 1 張</span><p class="rd">抵達折返點時，自己抽一張卡。</p></div>
       <div class="cyr-rule"><p class="rt">10K 個人</p><span class="rb">每人 1 張</span><p class="rd">第二次經過折返點時抽，避開第一圈的人潮。</p></div>
       <div class="cyr-rule relay"><p class="rt">10K 接力</p><span class="rb">每隊 1 張</span><p class="rd">由第一棒在折返點抽卡，第二棒不用抽；第二棒跑完到同一個牆區，兩人一起創作。</p></div>
     </div>
 
     <ul class="cyr-notes">
-      <li>抽卡時計時不停，抽完繼續跑。主題卡請帶回會場，它就是你的上牆通行證。</li>
-      <li>每個主題的卡片數量固定，抽完為止，四個牆區的人數會很平均。</li>
+      <li>抽卡時計時不停，抽完繼續跑。卡片請帶回會場，它就是你的上牆通行證，憑卡領主色噴漆。</li>
+      <li>卡片數量固定、抽完為止，四個牆區的人數和顏色都會很平均。</li>
       <li>一起來的家人朋友不跑步也沒關係，可以跟著你到同一個牆區一起創作。</li>
     </ul>
   </div>
@@ -478,29 +509,6 @@ footer a{color:var(--y)}
     </a>
     <p class="note">地圖截圖來源：Google 地圖，點圖可開啟完整路線。</p>
 
-    <div class="cat-grid">
-      <div class="catcard">
-        <p class="ct">5K 個人</p>
-        <p class="cd">往返一趟・男子組／女子組</p>
-        <p class="cl">由 NID 教練團隊帶跑。</p>
-        <p class="cq">預估 30 – 40 分鐘</p>
-        <p class="ccount" id="count-5K個人">目前 <b>–</b> 報名</p>
-      </div>
-      <div class="catcard ten">
-        <p class="ct">10K 個人</p>
-        <p class="cd">同路線往返兩趟・男子組／女子組</p>
-        <p class="cl">經過起點時大家幫忙加油。</p>
-        <p class="cq">預估 55 – 70 分鐘</p>
-        <p class="ccount" id="count-10K個人">目前 <b>–</b> 報名</p>
-      </div>
-      <div class="catcard relay">
-        <p class="ct">10K 接力</p>
-        <p class="cd">2 人各跑 5K・不限男女</p>
-        <p class="cl">第一棒跑完在起點交棒，一張表報兩人。</p>
-        <p class="cq">每棒預估 30 – 40 分鐘</p>
-        <p class="ccount" id="count-10K接力">目前 <b>–</b> 報名</p>
-      </div>
-    </div>
     <p class="totalcount" id="count-total">目前已有 <b>–</b> 人報名。</p>
     <div class="feebar">
       <p class="fk">FEE｜三組同價・每人計</p>
@@ -538,17 +546,17 @@ footer a{color:var(--y)}
           <div class="pickgrid three">
             <label class="pick">
               <input type="radio" name="category" value="5K個人" />
-              <span class="box"><span class="pt">5K 個人</span><span class="pd">男子組・女子組</span><span class="pm">折返點抽卡</span></span>
+              <span class="box"><span class="pt">5K 個人</span><span class="pd">往返一趟・男子組／女子組</span><span class="pm">預估 30 – 40 分鐘</span><span class="ccount" id="count-5K個人">目前 <b>–</b> 報名</span></span>
               <span class="tick">✓</span>
             </label>
             <label class="pick">
               <input type="radio" name="category" value="10K個人" />
-              <span class="box"><span class="pt">10K 個人</span><span class="pd">男子組・女子組</span><span class="pm">折返點抽卡</span></span>
+              <span class="box"><span class="pt">10K 個人</span><span class="pd">往返兩趟・男子組／女子組</span><span class="pm">預估 55 – 70 分鐘</span><span class="ccount" id="count-10K個人">目前 <b>–</b> 報名</span></span>
               <span class="tick">✓</span>
             </label>
             <label class="pick">
               <input type="radio" name="category" value="10K接力" />
-              <span class="box"><span class="pt">10K 接力</span><span class="pd">2 人各跑 5K</span><span class="pm">不限男女</span></span>
+              <span class="box"><span class="pt">10K 接力</span><span class="pd">2 人各跑 5K・不限男女</span><span class="pm">起點交棒・一張表報兩人</span><span class="ccount" id="count-10K接力">目前 <b>–</b> 報名</span></span>
               <span class="tick">✓</span>
             </label>
           </div>
@@ -700,11 +708,6 @@ footer a{color:var(--y)}
           <span class="det" id="feeDetail">選好戰隊後，這裡會顯示當天要繳的金額。</span>
         </div>
 
-        <div class="field">
-          <label for="companion">同行者 <span class="opt">（選填）</span></label>
-          <input type="text" id="companion" name="companion" autocomplete="off" maxlength="200" placeholder="一起來的家人或朋友姓名，例如：王小明、王小美" />
-          <p class="hint">要跑步的人請各自報名；不跑步的家人朋友可以跟著你到同一個牆區一起創作。</p>
-        </div>
 
         <details class="waiver">
           <summary>📋 活動注意事項與免責聲明（含未投保說明，請務必展開閱讀）</summary>
