@@ -146,6 +146,46 @@ a{color:inherit}
   .cyr-step:nth-child(n+2){border-left:0;border-top:4px solid var(--ink)}
 }
 
+/* HIGHLIGHTS */
+.hl-feature{display:flex;gap:18px;align-items:center;background:var(--ink);color:var(--paper);border:4px solid var(--ink);border-radius:20px;padding:20px 22px;box-shadow:8px 8px 0 var(--o);text-decoration:none;margin:0 0 22px}
+.hl-feature .hl-ic{flex:0 0 64px;width:64px;height:64px}
+.hl-feature .hl-new{display:inline-block;font-family:var(--disp);font-size:13px;letter-spacing:.2em;background:var(--g);color:var(--ink);padding:2px 10px;border-radius:999px;margin:0 0 6px}
+.hl-feature .hl-t{font-size:clamp(18px,3.2vw,24px);font-weight:900;line-height:1.4;margin:0}
+.hl-feature .hl-t b{color:var(--y)}
+.hl-feature .hl-more{font-size:14px;color:var(--y);margin:6px 0 0}
+.hl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hl-item{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:16px}
+.hl-item .hk{font-family:var(--disp);font-size:20px;line-height:1.1;margin:0 0 6px}
+.hl-item .hd{font-size:14px;margin:0}
+
+/* NID GEL */
+.gel{background:var(--ink);color:var(--paper);overflow:hidden}
+.gel-row{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+.gel-tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.gel-tags span{font-family:var(--disp);font-size:14px;letter-spacing:.18em;padding:3px 12px;border-radius:999px}
+.gel-title{font-family:var(--disp);font-size:clamp(38px,7vw,64px);line-height:1;letter-spacing:-.01em;margin:0 0 10px;color:var(--paper)}
+.gel-title em{font-style:normal;color:var(--y)}
+.gel-sub{font-size:clamp(20px,3.6vw,26px);font-weight:900;margin:0 0 16px;color:var(--y)}
+.gel .p{color:#E7E3D6}
+.gel-tag{font-family:var(--mark);font-size:clamp(20px,3.6vw,28px);color:var(--g);margin:20px 0 0;line-height:1.3}
+.gel-ph{position:relative;aspect-ratio:4/5;border:4px dashed var(--y);border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:20px;background:repeating-linear-gradient(45deg,#2c201a 0,#2c201a 14px,#33261F 14px,#33261F 28px)}
+.gel-ph .ph-big{font-family:var(--disp);font-size:clamp(44px,8vw,68px);line-height:1;color:transparent;-webkit-text-stroke:2px var(--y);margin:0}
+.gel-ph .ph-k{font-family:var(--disp);font-size:14px;letter-spacing:.25em;color:var(--y);margin:8px 0 0}
+.gel-ph .ph-s{font-size:14px;color:var(--mute-d);margin:0}
+.gel-sticker{position:absolute;top:-14px;right:-12px;background:var(--o);color:var(--ink);border:3px solid var(--ink);border-radius:999px;font-family:var(--disp);font-size:15px;letter-spacing:.12em;padding:8px 14px;transform:rotate(8deg);box-shadow:4px 4px 0 var(--y)}
+.ticker{background:var(--y);color:var(--ink);border-top:4px solid var(--ink);border-bottom:4px solid var(--ink);overflow:hidden;white-space:nowrap}
+.ticker-in{display:inline-block;padding:10px 0;font-family:var(--disp);font-size:20px;letter-spacing:.12em;animation:tick 26s linear infinite}
+.ticker-in span{padding:0 18px}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-in{animation:none}}
+@media (max-width:720px){
+  .hl-grid{grid-template-columns:1fr 1fr}
+  .gel-row{grid-template-columns:1fr}
+  .gel-ph{max-width:340px;width:100%;margin:10px auto 0}
+  .hl-feature{align-items:flex-start}
+  .hl-feature .hl-ic{flex-basis:48px;width:48px;height:48px}
+}
+
 /* FLOW */
 .tl{list-style:none;margin:20px 0 0;padding:0;border-left:4px solid var(--ink)}
 .tl li{position:relative;padding:0 0 18px 26px}
@@ -306,6 +346,125 @@ footer a{color:var(--y)}
   </div>
 </section>
 
+<section class="block yellow" id="color-your-run">
+  <div class="wrap">
+    <p class="sec-eyebrow">C O L O R　Y O U R　R U N</p>
+    <h2 class="sec-title"><span class="cyr-en">COLOR YOUR RUN</span>｜跑出你的色彩</h2>
+    <p class="cyr-sub">抽出你的主題，帶回你的創意，一起完成作品。</p>
+    <div class="cyr-steps">
+      <div class="cyr-step"><p class="sn">STEP 01</p><p class="sk">RUN</p><p class="sd">跑到折返點：彩虹河濱公園少棒場。</p></div>
+      <div class="cyr-step"><p class="sn">STEP 02</p><p class="sk">DRAW</p><p class="sd">在折返點抽一張主題卡，決定你回去要畫什麼。</p></div>
+      <div class="cyr-step"><p class="sn">STEP 03</p><p class="sk">CREATE</p><p class="sd">跑回會場，直接到抽中的主題牆區上牆創作。</p></div>
+    </div>
+
+    <p class="cyr-h">THEME CARD｜主題卡</p>
+    <p class="cyr-hz">四種主題，對應牆上的四個區塊。抽到哪一張，就到哪一區。</p>
+    <div class="theme-grid">
+      <div class="tcard">
+        <p class="tk">THEME CARD</p>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="70,6 22,68 54,68 40,114 98,44 64,44 82,6" fill="#241915"/><path d="M4 40 H24 M0 58 H18 M8 76 H26" stroke="#241915" stroke-width="6" stroke-linecap="round"/></svg>
+        <p class="tn">SPEED</p><p class="tz">速度</p>
+        <p class="td">呈現速度感、突破與爆發力</p>
+        <div class="te"><span>閃電</span><span>速度線</span><span>跑鞋</span><span>賽道</span><span>計時器</span></div>
+      </div>
+      <div class="tcard">
+        <p class="tk">THEME CARD</p>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6 C 72 34, 100 44, 96 78 C 93 102, 76 114, 60 114 C 40 114, 24 100, 24 78 C 24 58, 40 50, 42 30 C 52 40, 54 50, 52 60 C 66 50, 66 26, 60 6 Z" fill="#241915"/><path d="M60 64 C 68 76, 76 82, 74 96 C 72 106, 64 110, 60 110 C 52 110, 46 104, 46 96 C 46 86, 56 82, 60 64 Z" fill="#FF6B2C"/></svg>
+        <p class="tn">ENERGY</p><p class="tz">能量</p>
+        <p class="td">呈現熱情、活力與動態</p>
+        <div class="te"><span>火焰</span><span>太陽</span><span>能量波</span><span>爆炸圖形</span><span>色彩噴濺</span></div>
+      </div>
+      <div class="tcard">
+        <p class="tk">THEME CARD</p>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="4,112 44,48 64,78 80,58 116,112" fill="#241915"/><polygon points="78,4 84,22 102,22 88,33 93,50 78,40 63,50 68,33 54,22 72,22" fill="#241915"/></svg>
+        <p class="tn">GOAL</p><p class="tz">目標</p>
+        <p class="td">呈現挑戰、成就與終點</p>
+        <div class="te"><span>星星</span><span>翅膀</span><span>山峰</span><span>皇冠</span><span>箭頭</span></div>
+      </div>
+      <div class="tcard">
+        <p class="tk">THEME CARD</p>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="34" r="14" fill="#241915"/><circle cx="60" cy="26" r="16" fill="#241915"/><circle cx="90" cy="34" r="14" fill="#241915"/><rect x="12" y="54" width="36" height="56" rx="16" fill="#241915"/><rect x="40" y="48" width="40" height="64" rx="18" fill="#241915"/><rect x="72" y="54" width="36" height="56" rx="16" fill="#241915"/></svg>
+        <p class="tn">TOGETHER</p><p class="tz">團隊</p>
+        <p class="td">呈現合作、陪伴與連結</p>
+        <div class="te"><span>握手</span><span>人物</span><span>團隊剪影</span><span>連結線條</span><span>愛心</span></div>
+      </div>
+    </div>
+
+    <div class="cyr-color">
+      <div style="flex:1;min-width:220px">
+        <p class="cc-t">COLOR｜顏色自由搭配</p>
+        <p class="cc-d">顏色不用抽。各牆區準備多種顏色，用你想要的色彩表現抽到的主題。</p>
+      </div>
+      <div class="cyr-sw" aria-hidden="true">
+        <span style="background:#FADF4B"></span><span style="background:#FF6B2C"></span><span style="background:#A274FF"></span><span style="background:#C6F432"></span><span style="background:#4FB3FF"></span><span style="background:#FF6FB5"></span><span style="background:#FFFFFF"></span><span style="background:#111111"></span>
+      </div>
+    </div>
+
+    <p class="cyr-h">誰來抽卡？</p>
+    <div class="cyr-rules">
+      <div class="cyr-rule"><p class="rt">5K 個人</p><span class="rb">每人 1 張</span><p class="rd">抵達折返點時，自己抽一張主題卡。</p></div>
+      <div class="cyr-rule"><p class="rt">10K 個人</p><span class="rb">每人 1 張</span><p class="rd">第二次經過折返點時抽，避開第一圈的人潮。</p></div>
+      <div class="cyr-rule relay"><p class="rt">10K 接力</p><span class="rb">每隊 1 張</span><p class="rd">由第一棒在折返點抽卡，第二棒不用抽；第二棒跑完到同一個牆區，兩人一起創作。</p></div>
+    </div>
+
+    <ul class="cyr-notes">
+      <li>抽卡時計時不停，抽完繼續跑。主題卡請帶回會場，它就是你的上牆通行證。</li>
+      <li>每個主題的卡片數量固定，抽完為止，四個牆區的人數會很平均。</li>
+      <li>塗鴉藝術家會先在各區畫好輪廓，最後統一收邊，把大家的創意整合成一面完整的作品。</li>
+      <li>一起來的家人朋友不跑步也沒關係，可以跟著你到同一個牆區一起創作。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block cream" id="highlights">
+  <div class="wrap">
+    <p class="sec-eyebrow">H I G H L I G H T S</p>
+    <h2 class="sec-title">活動亮點</h2>
+    <a class="hl-feature" href="#nid-gel">
+      <svg class="hl-ic" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 C 40 18, 52 28, 52 40 A 20 20 0 0 1 12 40 C 12 28, 24 18, 32 4 Z" fill="#FADF4B" stroke="#F3F1EA" stroke-width="3"/><polygon points="35,20 24,40 32,40 28,54 42,32 34,32 38,20" fill="#241915"/></svg>
+      <div>
+        <span class="hl-new">NEW · FIRST TASTE</span>
+        <p class="hl-t"><b>NID GEL 首次亮相</b>｜搶先體驗 NID 即將推出的自有果膠！</p>
+        <p class="hl-more">看新品介紹 ↓</p>
+      </div>
+    </a>
+    <div class="hl-grid">
+      <div class="hl-item" style="background:var(--p)"><p class="hk">COLOR YOUR RUN</p><p class="hd">折返點抽主題卡，回來到主題牆區上牆。</p></div>
+      <div class="hl-item" style="background:var(--g)"><p class="hk">TEAM POINTS</p><p class="hd">全程計時，各組前三名為戰隊累積積分。</p></div>
+      <div class="hl-item" style="background:var(--o)"><p class="hk">STREET ART</p><p class="hd">塗鴉藝術家帶領，一起完成 RUNNER WALL。</p></div>
+      <div class="hl-item"><p class="hk">PHOTO</p><p class="hd">攝影師全程拍攝，活動後提供照片連結。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block gel" id="nid-gel">
+  <div class="wrap">
+    <div class="gel-row">
+      <div>
+        <p class="sec-eyebrow">N E W　P R O D U C T</p>
+        <div class="gel-tags">
+          <span style="background:var(--y);color:var(--ink)">COMING SOON</span>
+          <span style="background:var(--g);color:var(--ink)">FIRST TASTE</span>
+          <span style="border:2px solid var(--paper)">NID 自有品牌</span>
+        </div>
+        <h2 class="gel-title"><em>NID GEL</em><span class="nb">｜FIRST TASTE</span></h2>
+        <p class="gel-sub">NID 自有果膠，即將登場！</p>
+        <p class="p">不只是跑步，這次也要搶先體驗 NID 的全新產品！</p>
+        <p class="p">NID 即將推出自有品牌果膠，將於本次 Family Day 首次亮相，並提供活動參與者搶先試用。</p>
+        <p class="p">成為第一批體驗 NID GEL 的跑者，一起見證 NID 品牌的新篇章。</p>
+        <p class="gel-tag">COMING SOON. FUEL YOUR RUN.</p>
+      </div>
+      <div class="gel-ph" role="img" aria-label="NID GEL 正式產品圖預留位置">
+        <span class="gel-sticker">11.21 FIRST TASTE</span>
+        <p class="ph-big">NID<br />GEL</p>
+        <p class="ph-k">PRODUCT IMAGE</p>
+        <p class="ph-s">正式產品圖即將公開</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="ticker" aria-hidden="true"><div class="ticker-in"><span>COMING SOON</span><span>✦</span><span>FIRST TASTE</span><span>✦</span><span>NID GEL</span><span>✦</span><span>FUEL YOUR RUN</span><span>✦</span><span>COMING SOON</span><span>✦</span><span>FIRST TASTE</span><span>✦</span><span>NID GEL</span><span>✦</span><span>FUEL YOUR RUN</span><span>✦</span><span>COMING SOON</span><span>✦</span><span>FIRST TASTE</span><span>✦</span><span>NID GEL</span><span>✦</span><span>FUEL YOUR RUN</span><span>✦</span><span>COMING SOON</span><span>✦</span><span>FIRST TASTE</span><span>✦</span><span>NID GEL</span><span>✦</span><span>FUEL YOUR RUN</span><span>✦</span></div></div>
+
 <section class="block dark">
   <svg class="splat" viewBox="0 0 300 130" aria-hidden="true"><circle cx="200" cy="58" r="56" fill="#FF6B2C" opacity=".75"/><circle cx="258" cy="38" r="36" fill="#A274FF" opacity=".75"/><circle cx="140" cy="40" r="30" fill="#C6F432"/><rect x="196" y="78" width="8" height="40" rx="4" fill="#FF6B2C"/><circle cx="200" cy="120" r="6" fill="#FF6B2C"/></svg>
   <div class="wrap">
@@ -381,75 +540,6 @@ footer a{color:var(--y)}
   </div>
 </section>
 
-<section class="block yellow" id="color-your-run">
-  <div class="wrap">
-    <p class="sec-eyebrow">C O L O R　Y O U R　R U N</p>
-    <h2 class="sec-title"><span class="cyr-en">COLOR YOUR RUN</span>｜跑出你的色彩</h2>
-    <p class="cyr-sub">抽出你的主題，帶回你的創意，一起完成作品。</p>
-    <div class="cyr-steps">
-      <div class="cyr-step"><p class="sn">STEP 01</p><p class="sk">RUN</p><p class="sd">跑到折返點：彩虹河濱公園少棒場。</p></div>
-      <div class="cyr-step"><p class="sn">STEP 02</p><p class="sk">DRAW</p><p class="sd">在折返點抽一張主題卡，決定你回去要畫什麼。</p></div>
-      <div class="cyr-step"><p class="sn">STEP 03</p><p class="sk">CREATE</p><p class="sd">跑回會場，直接到抽中的主題牆區上牆創作。</p></div>
-    </div>
-
-    <p class="cyr-h">THEME CARD｜主題卡</p>
-    <p class="cyr-hz">四種主題，對應牆上的四個區塊。抽到哪一張，就到哪一區。</p>
-    <div class="theme-grid">
-      <div class="tcard">
-        <p class="tk">THEME CARD</p>
-        <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="70,6 22,68 54,68 40,114 98,44 64,44 82,6" fill="#241915"/><path d="M4 40 H24 M0 58 H18 M8 76 H26" stroke="#241915" stroke-width="6" stroke-linecap="round"/></svg>
-        <p class="tn">SPEED</p><p class="tz">速度</p>
-        <p class="td">呈現速度感、突破與爆發力</p>
-        <div class="te"><span>閃電</span><span>速度線</span><span>跑鞋</span><span>賽道</span><span>計時器</span></div>
-      </div>
-      <div class="tcard">
-        <p class="tk">THEME CARD</p>
-        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 6 C 72 34, 100 44, 96 78 C 93 102, 76 114, 60 114 C 40 114, 24 100, 24 78 C 24 58, 40 50, 42 30 C 52 40, 54 50, 52 60 C 66 50, 66 26, 60 6 Z" fill="#241915"/><path d="M60 64 C 68 76, 76 82, 74 96 C 72 106, 64 110, 60 110 C 52 110, 46 104, 46 96 C 46 86, 56 82, 60 64 Z" fill="#FF6B2C"/></svg>
-        <p class="tn">ENERGY</p><p class="tz">能量</p>
-        <p class="td">呈現熱情、活力與動態</p>
-        <div class="te"><span>火焰</span><span>太陽</span><span>能量波</span><span>爆炸圖形</span><span>色彩噴濺</span></div>
-      </div>
-      <div class="tcard">
-        <p class="tk">THEME CARD</p>
-        <svg viewBox="0 0 120 120" aria-hidden="true"><polygon points="4,112 44,48 64,78 80,58 116,112" fill="#241915"/><polygon points="78,4 84,22 102,22 88,33 93,50 78,40 63,50 68,33 54,22 72,22" fill="#241915"/></svg>
-        <p class="tn">GOAL</p><p class="tz">目標</p>
-        <p class="td">呈現挑戰、成就與終點</p>
-        <div class="te"><span>星星</span><span>翅膀</span><span>山峰</span><span>皇冠</span><span>箭頭</span></div>
-      </div>
-      <div class="tcard">
-        <p class="tk">THEME CARD</p>
-        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="34" r="14" fill="#241915"/><circle cx="60" cy="26" r="16" fill="#241915"/><circle cx="90" cy="34" r="14" fill="#241915"/><rect x="12" y="54" width="36" height="56" rx="16" fill="#241915"/><rect x="40" y="48" width="40" height="64" rx="18" fill="#241915"/><rect x="72" y="54" width="36" height="56" rx="16" fill="#241915"/></svg>
-        <p class="tn">TOGETHER</p><p class="tz">團隊</p>
-        <p class="td">呈現合作、陪伴與連結</p>
-        <div class="te"><span>握手</span><span>人物</span><span>團隊剪影</span><span>連結線條</span><span>愛心</span></div>
-      </div>
-    </div>
-
-    <div class="cyr-color">
-      <div style="flex:1;min-width:220px">
-        <p class="cc-t">COLOR｜顏色自由搭配</p>
-        <p class="cc-d">顏色不用抽。各牆區準備多種顏色，用你想要的色彩表現抽到的主題。</p>
-      </div>
-      <div class="cyr-sw" aria-hidden="true">
-        <span style="background:#FADF4B"></span><span style="background:#FF6B2C"></span><span style="background:#A274FF"></span><span style="background:#C6F432"></span><span style="background:#4FB3FF"></span><span style="background:#FF6FB5"></span><span style="background:#FFFFFF"></span><span style="background:#111111"></span>
-      </div>
-    </div>
-
-    <p class="cyr-h">誰來抽卡？</p>
-    <div class="cyr-rules">
-      <div class="cyr-rule"><p class="rt">5K 個人</p><span class="rb">每人 1 張</span><p class="rd">抵達折返點時，自己抽一張主題卡。</p></div>
-      <div class="cyr-rule"><p class="rt">10K 個人</p><span class="rb">每人 1 張</span><p class="rd">第二次經過折返點時抽，避開第一圈的人潮。</p></div>
-      <div class="cyr-rule relay"><p class="rt">10K 接力</p><span class="rb">每隊 1 張</span><p class="rd">由第一棒在折返點抽卡，第二棒不用抽；第二棒跑完到同一個牆區，兩人一起創作。</p></div>
-    </div>
-
-    <ul class="cyr-notes">
-      <li>抽卡時計時不停，抽完繼續跑。主題卡請帶回會場，它就是你的上牆通行證。</li>
-      <li>每個主題的卡片數量固定，抽完為止，四個牆區的人數會很平均。</li>
-      <li>塗鴉藝術家會先在各區畫好輪廓，最後統一收邊，把大家的創意整合成一面完整的作品。</li>
-      <li>一起來的家人朋友不跑步也沒關係，可以跟著你到同一個牆區一起創作。</li>
-    </ul>
-  </div>
-</section>
 
 
 <section class="block yellow" id="register">
